@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Guerreiro"
+    },
+    {
+      "id": 2,
+      "name": "Arqueiro"
+    },
+    {
+      "id": 3,
+      "name": "Mago"},
+
+      {"id": 4,
+      "name": "Bárbaro"
+    },
+
+    {"id": 5,
+    "name": "Feiticeiro"}
+  ],
+  "fichas": [
+    {
+      "name": "Erick",
+      "personagem": "Guts",
+      "category_id": 1
+    },
+    {
+      "name": "Yan",
+      "personagem": "Jax",
+      "category_id": 2
+    }
+  ]
+}
