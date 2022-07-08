@@ -21,8 +21,16 @@ async function up() {
       FOREIGN KEY (category_id) REFERENCES categories (id)
     )
   `;
+  const usersSql = `
+    CREATE TABLE users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      email VARCHAR(50) NOT NULL UNIQUE,
+      password VARCHAR(20) NOT NULL
+    )
+  `;
 
   db.run(fichasSql);
+  db.run(usersSql);
 }
 
 export default { up };

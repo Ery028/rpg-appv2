@@ -1,6 +1,7 @@
 import { Router } from "express";
 import Category from "./models/Category.js";
 import Ficha from "./models/Ficha.js";
+import User from "./models/User.js";
 
 const router = Router();
 
@@ -46,6 +47,18 @@ router.get('/categories', async (req, res) => {
   const categories = await Category.readAll();
 
   res.json(categories);
+});
+
+router.post('/users', async (req, res) => {
+  try {
+    const user = req.body;
+
+    const newUser = await User.create(user);
+
+    res.json(newUser);
+  } catch(error) {
+    throw new Error('Error in create user');
+  }
 });
 
 router.use(function(req, res, next) {
